@@ -1,0 +1,45 @@
+<tela@BoxLayout>:
+    orientation: 'vertical'
+
+    BoxLayout:
+        Button:
+            text: "Novo"
+            on_press: root.novo()
+
+        TextInput:
+            id: inp
+            size_hint_x: 5
+
+        Button:
+            text: "Sortear"
+            on_press: root.click()
+
+    BoxLayout:
+        Label:
+            text:"Nomes a serem Sorteados: "
+
+        Label:
+            id: lb3
+
+    Label:
+        id: lb
+        text: "Clique em sortear"
+        font_size: 35
+        bold: True
+        size_hint_y: 10
+
+        canvas.before:
+            Color:
+                rgba: .14, .14, .14, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+    BoxLayout:
+        Label:
+            text:"Ultimos Sorteados: "
+
+        Label:
+            id: lb2
+
+tela:
